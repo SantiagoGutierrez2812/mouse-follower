@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-const FollowMouse = () => {
+const FollowMouse = ({enabled, position, setEnabled}) => {
   return (
     <>
       <div style={{
@@ -41,7 +41,11 @@ function App() {
 
   return (
     <main>
-      <FollowMouse></FollowMouse>
+      <FollowMouse
+        enabled={enabled}
+        setEnabled={setEnabled}
+        position={position}
+      />
     </main>
   )
 }
